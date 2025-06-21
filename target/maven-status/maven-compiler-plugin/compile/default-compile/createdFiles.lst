@@ -1,0 +1,6 @@
+com\upiiz\examen_3\controllers\HomeController.class
+com\upiiz\examen_3\repositories\CategoriaRepository.class
+com\upiiz\examen_3\controllers\CategoriaController.class
+com\upiiz\examen_3\Examen3Application.class
+com\upiiz\examen_3\services\CategoriaService.class
+com\upiiz\examen_3\models\CategoriaModel.class

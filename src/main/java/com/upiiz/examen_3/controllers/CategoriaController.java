@@ -39,7 +39,6 @@ public class CategoriaController {
         CategoriaModel categoria = new CategoriaModel(
                 objetoCategoria.get("nombre").toString()
         );
-        //Esta mascota ya trae su id, que es util para el Front
         CategoriaModel categoriaGuardada=categoriaService.save(categoria);
         if(categoriaGuardada!=null)
             return ResponseEntity.ok(Map.of(
@@ -79,7 +78,7 @@ public class CategoriaController {
         CategoriaModel categoria = categoriaService.findCategoriaById(id);
         return ResponseEntity.ok(Map.of(
                 "estado",1,
-                "mensaje","Mascota encontrada",
+                "mensaje","Categoria encontrada",
                 "categoria", categoria
         ));
     }

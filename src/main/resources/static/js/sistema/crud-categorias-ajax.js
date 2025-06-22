@@ -78,10 +78,7 @@ function guardarCategoria(){
 }
 
 function seleccionarCategoriaActualizar(id) {
-    //1.- Seleccionar el id a actualizar
     idCategoriaActualizar=id;
-    //2.- Consultar la API para obtener los datos de la mascota - GET
-
     $.ajax({
         method:"GET",
         url: "/v1/api/categorias/actualizar/"+idCategoriaActualizar,
@@ -98,7 +95,6 @@ function seleccionarCategoriaActualizar(id) {
             alert(mensaje);
         }
     });
-    //3.- Mostrar los datos en el Modal
 
 }
 
@@ -129,7 +125,6 @@ function actualizarCategoria() {
                 }
             },
             error:function (xhr,error,mensaje) {
-                //Se dispara la funcion si no conexion al servidor
                 alert("Error de comunicacion: "+error);
             }
         });

@@ -34,18 +34,18 @@ public class CategoriaService implements CategoriaRepository {
 
     @Override
     public CategoriaModel save(CategoriaModel categoria) {
-        KeyHolder keyHolder = new GeneratedKeyHolder(); // Para capturar el ID generado
+        KeyHolder keyHolder = new GeneratedKeyHolder();
 
         jdbcTemplate.update(connection -> {
             PreparedStatement ps = connection.prepareStatement(
                     "INSERT INTO categorias(nombre) VALUES (?)",
-                    Statement.RETURN_GENERATED_KEYS // Indicar que queremos recuperar las claves generadas
+                    Statement.RETURN_GENERATED_KEYS
             );
             ps.setString(1, categoria.getNombre());
             return ps;
         }, keyHolder);
 
-        // Obtenemos el ID generado y lo asignamos al producto
+
         Number generatedId = keyHolder.getKey();
         if (generatedId != null) {
             categoria.setId(generatedId.longValue());
@@ -53,7 +53,7 @@ public class CategoriaService implements CategoriaRepository {
             categoria.setId(0L);
         }
 
-        return categoria; // Retornamos el modelo con el ID asignado
+        return categoria;
     }
 
     @Override

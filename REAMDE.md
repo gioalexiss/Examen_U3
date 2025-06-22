@@ -32,18 +32,18 @@ Este proyecto implementa un sistema básico de gestión de categorías con opera
 ├── static/ # Archivos JS, CSS  
 ├── templates/  
 ├── pom.xml  
-└── README.md  
+└── README.md
 
 ## Tabla 'categorias' utilizada
 ```sql
 CREATE TABLE categorias (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    nombre VARCHAR(50)
+                            id INT PRIMARY KEY AUTO_INCREMENT,
+                            nombre VARCHAR(50)
 );
 ```
 
 ## ¿Como ejecutar el proyecto?
-- Java 17  
+- Java 17
 - Maven
 - MySQL
 - Un IDE como IntelliJ o VS Code
@@ -71,7 +71,7 @@ spring.jpa.show-sql=true
 
 ## Validaciones
 - El nombre de una categoria debe tener más de 3 caracteres
-- No se permiten caracteres especiales 
+- No se permiten caracteres especiales
 - Estos errores se muestran dentro del modal, ya se en el de agregar o editar
 
 # Autor
